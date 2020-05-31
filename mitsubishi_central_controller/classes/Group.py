@@ -1,7 +1,5 @@
 import mitsubishi_central_controller.util.bulk as bulk
-from mitsubishi_central_controller.util.ControllerDictBuilder import ControllerDictBuilder
 from mitsubishi_central_controller.util.temperature_utils import c_to_f
-from mitsubishi_central_controller.util.xml_utils import parse_xml
 
 
 class Group:
@@ -58,10 +56,9 @@ class Group:
         self.current_inlet_temperature_fahrenheit = None
         self.lcd_name = None
         self.web_name = None
-        self.available_fan_speeds = None
-        self.available_air_directions = None
-        self.modes = None
-
+        self.available_fan_speeds = []
+        self.available_air_directions = []
+        self.modes = []
 
     def update_from_bulk(self):
         if self.bulk_string is None:

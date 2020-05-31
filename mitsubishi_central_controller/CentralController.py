@@ -87,6 +87,11 @@ class CentralController:
         await self.async_send_command(xml)
         await self.async_update_single_group_bulk(group)
 
+    async def set_mode_for_group(self, group, mode):
+        xml = ControllerDictBuilder().set_mnet(group.group_id, mode=mode).to_xml()
+        await self.async_send_command(xml)
+        await self.async_update_single_group_bulk(group)
+
     async def set_temperature_fahrenheit_for_group(self, group, temperature):
         xml = ControllerDictBuilder().set_mnet(group.group_id, set_temp=f_to_c(int(temperature))).to_xml()
         await self.async_send_command(xml)
