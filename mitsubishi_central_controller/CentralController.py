@@ -4,7 +4,7 @@ import asyncio
 
 from mitsubishi_central_controller.util.dict_utils import get_group_list_from_dict, get_system_data_from_dict, \
     get_single_bulk_from_dict, get_single_racsw_from_dict, get_single_energycontrol_from_dict, get_lcd_name_from_dict, \
-    get_web_name_from_dict, get_group_info_list_from_dict
+    get_group_info_list_from_dict
 from mitsubishi_central_controller.util.temperature_utils import f_to_c
 from mitsubishi_central_controller.util.xml_utils import parse_xml
 
