@@ -60,7 +60,7 @@ class Group:
         self.web_name = None
         self.available_fan_speeds = None
         self.available_air_directions = None
-
+        self.modes = None
 
 
     def update_from_bulk(self):
