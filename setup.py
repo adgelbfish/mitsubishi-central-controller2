@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="mitsubishi-central-controller-adgelbfish",
-    version="0.0.1",
+    version="0.0.2",
     author="Avraham David Gelbfish",
     author_email="adg@adgelb.fish",
     description="Library for Interfacing with a Mitsubishi Central Controller",
