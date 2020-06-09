@@ -75,6 +75,7 @@ class CentralController:
         group.bulk_string = get_single_bulk_from_dict(parsed)
         group.rac_sw = get_single_racsw_from_dict(parsed)
         group.energy_control = get_single_energycontrol_from_dict(parsed)
+        return group
 
     async def update_lcd_name_for_group(self, group):
         xml = ControllerDictBuilder().get_mnet(group.group_id, lcd_name=True).to_xml()
